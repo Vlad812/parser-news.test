@@ -1,0 +1,19 @@
+{%  extends 'base.html.twig' %}
+
+{% block title %} {{ article.getTitle() }} {% endblock %}
+
+{% block content %}
+    <div>
+        <h1>{{ article.getTitle() }}</h1>
+
+        {% if article.getImg() %}
+            <div>
+                <img src="/{{ imgDir }}/{{ article.getImg() }}" title="{{ article.getTitle() }}" alt="{{ article.getTitle() }}">
+            </div>
+        {% endif %}
+
+        <article>
+            {{ article.getArticle() }}
+        </article>
+    </div>
+{% endblock %}

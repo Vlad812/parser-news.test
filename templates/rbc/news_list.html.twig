@@ -1,0 +1,16 @@
+{%  extends 'base.html.twig' %}
+
+{% block title %} Список Новостей RBC {% endblock %}
+
+{% block content %}
+    <div>
+        <h1>Список Новостей RBC</h1>
+        <div>
+            {% for item in newsList %}
+                <div>{{ item['title'] }}</div>
+                <div>{{ item['articleDescribe']}} ... </div>
+                <div><a href="/rbc_article/{{ item['id'] }} " target="_blank">Подробней...</a></div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
