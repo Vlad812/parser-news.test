@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS NewsResourceReference;
 CREATE TABLE IF NOT EXISTS NewsResourceReference
 (
     id      INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-    name    VARCHAR(250) DEFAULT NULL,
+    name    VARCHAR(250) NOT NULL,
     PRIMARY KEY (id)
 )
     ENGINE = InnoDB
